@@ -1,0 +1,43 @@
+\documentclass[a4paper,6pt]{article}
+\usepackage[polish]{babel}
+\usepackage[latin2]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{anysize}
+\usepackage{times}
+\usepackage{multirow}
+ 
+%\marginsize{left}{right}{top}{bottom}
+\marginsize{0.5cm}{3cm}{3cm}{3cm}
+\sloppy
+ 
+\begin{document}
+ 
+\begin{table}[htbp]
+\label{Tab:SRNRValues}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+
+\multicolumn{9}{|c|}{\centering \textbf{Paired Samples Test}}\\ \hline
+
+\multirow{7}{2cm}{\centering \textbf{Type of\newline Test}}}&\multirow{7}{2cm}{\centering \textbf{Comparison}}}&\multicolumn{5}{|c|}{\centering \textbf{Paired Differences}}& \multirow{7}{2cm}{\centering \textbf{t value}}}&\multirow{7}{2cm}{\centering \textbf{d.f}}}\\
+
+\cline{3-7}&  & \multirow{6}{2cm}{\centering \textbf{Mean}}} & \multirow{6}{2cm}{\centering \textbf{Std. Deviation}}}&\multirow{6}{2cm}{\centering \textbf{Std. Error Mean}}}& \multicolumn{2}{|p{2cm}|}{\centering \textbf{95\% Confidence Interval of the Difference}}&& \\ 
+
+\cline{6-7} & & & & & \textbf{Lower} & \textbf{Upper}& &\\\hline
+&Hybrid GA&&&&&&&\\
+Pair 1&Path Cost and & -507.00& 54.01& 31.18& -641.17& -372.83& -16.26&2.00\\
+&GA Path Cost&&&&&&&\\\hline
+
+
+\end{tabular}
+\end{center}
+\end{table}
+
+\end{document}
+
+\multirow{3}{1cm}{Method}& \multicolumn{3}{p{20cm}|}{\centering Measurements} \\
+\cline{2-4} & \multicolumn{1}{c|}{Clean} & \multicolumn{1}{c|}{SMNR=15 dB} & \multicolumn{1}{c|}{SMNR = 10 dB} \\ \hline
+Type1 & 27.54 & 13.23 & 6.80 \\
+Type2 & 29.55 & 9.61 & 6 \\
+Type3 & 25.99 & 11.49 & 6.15 \\
+\hline

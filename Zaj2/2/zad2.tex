@@ -1,0 +1,73 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin2]{inputenc}
+\usepackage[polish]{babel}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{times}
+\usepackage{anysize}
+
+\marginsize{1.5cm}{1.5cm}{1.5cm}{1.5cm}
+\sloppy 
+
+\theoremstyle{definition}
+\newtheorem{df}{Definicja}
+
+
+\begin{document}
+
+% \maketitle
+
+\section{Zbiory rozmyte}
+
+Pojêcie zbioru rozmytego zosta³o wprowadzone przez L. A. Zadeha w 1965. Stosowanie zbiorów rozmytych w systemach sterownia pozwala na dok³adniejsze odwzorowanie pojêæ stosowanych przez ludzi, które czêsto s± subiektywne i nieprecyzyjne. Stopniowe przej¶cie miêdzy przynale¿no¶ci± do zbioru a jej brakiem pozwala nam unikn±æ ¶cis³ej klasyfikacji elementów, która czêsto jest niemo¿liwa. Logika rozmyta jest uogólnieniem logiki klasycznej. 
+
+Koncepcja zbiorów rozmytych wyros³a na gruncie logicznego formalizowania pomys³u, aby elementom zbioru przypisywaæ tzw. stopieñ przynale¿no¶ci do zbioru, okre¶laj±cy warto¶æ prawdziwo¶ci danego wyra¿enia za pomoc± liczb z przedzia³u $[0,1]$. 
+
+\begin{df}
+\textbf{Zbiorem rozmytym} $\mathbi{A}$ w pewnej niepustej przestrzeni $\mathbi{X}$ nazywamy zbiór uporz±dkowanych par:
+
+\begin{equation}
+\mathbi{A} = \{(x,\mu_{\mathbi{A}}(x))\colon x \in \mathbi{X}\},
+\end{equation}
+
+gdzie:
+
+\begin{equation}
+\mu_{\mathbi{A}} \colon \mathbi{X} \rightarrow [0,1]
+\end{equation}
+
+jest \textbf{funkcj± przynale¿no¶ci} zbioru $\mathbi{A}$.
+Warto¶æ funkcji $\mu_{\mathbi{A}}(x)$ w punkcie $x$ \textbf{stopniem przynale¿no¶ci} $x$ do zbioru $\mathbi{A}$.
+\end{df}
+
+
+Zbiory rozmyte $A$, $B$, $C$ itd. wzglêdem $\mathbi{X}$ nazywamy równie¿ \textbf{podzbiorami rozmytymi} w $\mathbi{X}$.
+Zbiór wszystkich zbiorów rozmytych w $\mathbi{X}$ oznaczamy przez $F(\mathbi{X})$. Zbiory klasyczne mo¿na interpretowaæ jako zbiory rozmyte z~funkcj± przynale¿no¶ci przyjmuj±c± tylko warto¶ci 0 i 1.
+
+\medskip
+\noindent
+{\bf Przyk³ad:} Niech $\mathbi{A}$ oznacza zbiór niskich temperatur i niech $\mathbi{X}= [-5,50]$. Funkcja przynale¿no¶ci mo¿e byæ okre¶lona nastêpuj±co:
+
+\begin{equation}
+\mu_{\mathbi{A}}= \left\{ \begin{array}{ll}
+1 & \colon x < 10, \\
+-\frac{1}{10}+2 & \colon 10 \leq x \leq 20, \\
+0 & \colon x > 20.
+\end{array}
+\end{equation}
+
+W przypadku, gdy ustalony zbiór $\mathbi{X}$ jest skoñczony, tzn. $\mathbi{X}= \{x_1,x_2,\dots,x_n\}$, funkcje przynale¿no¶ci zbiorów rozmytych mo¿na przedstawiaæ za pomoc± tabelek, stosowaæ zapis w postaci sumy:
+
+\begin{equation}
+\mathbi{A}= \sum_{i=1}^n \frac{\mu_{\mathbi{A}}(x)}{x},
+\end{equation}
+
+(kreski u³amkowe i znaki sumy nale¿y rozumieæ czysto symbolicznie) lub podawaæ elementy zbioru w postaci par:
+
+\begin{equation}
+\mathbi{A}= \{(x_1, \mu_{\mathbi{A}}(x_2)), (x_2, \mu_{\mathbi{A}}(x_1)), \dots , (x_n, \mu_{\mathbi{A}}(x_n))\}.
+\end{equation}
+
+\end{document}
+

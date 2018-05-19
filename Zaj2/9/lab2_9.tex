@@ -1,0 +1,32 @@
+\documentclass[a4paper,12pt]{article}      
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc}
+\usepackage{times}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[polish]{babel}
+\theoremstyle{definition}
+\newtheorem{ex}{Przykład}
+\setcounter{ex}{7}
+\sloppy
+
+\begin{document}
+\begin{ex}
+Wykażemy, że funkcje
+\end{ex}
+\begin{center}
+$ f(x) = -arctgx$ \quad i \quad $g(x) = arccos\frac{x}{\sqrt{1 + x^{2}}}$
+\end{center}
+różnią się jedynie o stałą $B = -\frac{\pi}{2}$\\
+
+Dla każdego $x \in \mathbb{R}$ mamy: 
+$$f'(x) = \frac{-1}{1 + x^2}, $$
+$$g'(x) = \frac{-1}{\sqrt{1-{(\frac{x}{\sqrt{1 + x^{2}}})}^{2}}} \cdot \frac{\sqrt{1 + x^{2}} -  \frac{2x^{2}}{2\sqrt{1 + x^{2}}}}{1 + x^{2}} = \frac{-1}{1 + x^{2}}; $$
+oznacza to, że: 
+$$f'(x) = g'(x),$$
+więc na podstawie statniego wniosku możemy napisać:
+$$\forall x \in \mathbb{R}:\quad f(x) = g(x) + B$$
+Jednocześnie, np. dla $x = 0$ mamy: 
+$$ f(0) = 0, \quad g(0)=\frac{\pi}{2},$$
+zatem nietrudno zauważyć, że ostatnie równość ma miejsce, gdy $B = -\frac{\pi}{2}$. 
+\end{document}

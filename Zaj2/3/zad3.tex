@@ -1,0 +1,50 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin2]{inputenc}
+\usepackage[polish]{babel}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{times}
+\usepackage{anysize}
+
+\marginsize{1.5cm}{1.5cm}{1.5cm}{1.5cm}
+\sloppy 
+
+
+\begin{document}
+
+Istnieje scisly zwiazek miedzy rozkladem macierzy $\mathbi{A}$ na macierze $\mathbi{L}$ i $\mathbi{U}$ a metoda eliminacji Gaussa. Mozna wykazac, ze elementy kolejnych kolumn macierzy $\mathbi{L}$ sa rowne wspolczynnikom przez ktore mnozone sa w kolejnych krokach wiersze ukladow rownan celem dokonainia eliminacji niewiadomych w odpowiednich kolumnach. Natomiast macierz $\mathbi{U}$ jest rowna macierzy trojkatnej uzyskanej z elimincaji Gaussa.
+
+$$ [A|b] = \left[\begin{array}{rrrr} 
+2 & 2 & 4 & 4 \\
+1 & 2 & 2 & 4 \\
+1 & 4 & 1 & 1 
+\end{array}\right] 
+= 
+\left[\begin{array}{rrrr}
+2 & 2 & 4 & 4 \\
+0 & 1 & 0 & 2 \\
+0 & 3 & -1 & -1 
+\end{array}\right]
+=
+\left[\begin{array}{rrrr}
+2 & 2 & 4 & 4 \\
+0 & 1 & 0 & 2 \\
+0 & 0 & -1 & -7 
+\end{array}\right]$$
+
+$$ L = \left[\begin{array}{rrr} 
+1 & 0 & 0 \\
+\frac{1}{2} & 1 & 0 \\
+\frac{1}{2} & 3 & 1 
+\end{array}\right]
+& \qquad
+U = \left[\begin{array}{rrrr} 
+2 & 2 & 4 & 4\\
+0 & 1 & 0 & 2\\
+0 & 0 & -1 & -7
+\end{array}\right]
+$$
+
+
+\end{document}

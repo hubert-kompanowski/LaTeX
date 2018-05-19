@@ -1,0 +1,99 @@
+\documentclass[a4paper,12pt]{book}      
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc}
+\usepackage{times}
+\usepackage[polish]{babel}
+\usepackage{listings}
+\usepackage{color}
+\sloppy
+\usepackage[margin=25mm]{geometry}
+\lstset{
+	literate={ą}{{\k{a}}}1
+           {ć}{{\'c}}1
+           {ę}{{\k{e}}}1
+           {ó}{{\'o}}1
+           {ń}{{\'n}}1
+           {ł}{{\l{}}}1
+           {ś}{{\'s}}1
+           {ź}{{\'z}}1
+           {ż}{{\.z}}1
+           {Ą}{{\k{A}}}1
+           {Ć}{{\'C}}1
+           {Ę}{{\k{E}}}1
+           {Ó}{{\'O}}1
+           {Ń}{{\'N}}1
+           {Ł}{{\L{}}}1
+           {Ś}{{\'S}}1
+           {Ź}{{\'Z}}1
+           {Ż}{{\.Z}}1,
+	basicstyle=\small\ttfamily,
+  keywordstyle=\color{red}\ttfamily\bfseries\small
+}
+
+\lstloadlanguages{Ada,C++}
+
+\definecolor{darkred}{rgb}{0.9,0,0}
+\definecolor{grey}{rgb}{0.4,0.4,0.4}
+\definecolor{orange}{rgb}{1,0.6,0.05}
+\definecolor{darkgreen}{rgb}{0.2,0.5,0.05}
+
+%\marginsize{left}{right}{top}{bottom}
+
+\lstset{language=C++,
+basicstyle=\ttfamily\small,
+keywordstyle=\color{darkgreen}\ttfamily\bfseries\small,
+stringstyle=\color{red}\ttfamily\small,
+commentstyle=\color{grey}\ttfamily\small,
+numbers=left,
+numberstyle=\color{darkred}\ttfamily\scriptsize,
+identifierstyle=\color{blue}\ttfamily\small,
+showstringspaces=false,
+morekeywords={}
+}
+
+
+\begin{document}
+\section*{Przykłady funkcji w C++}
+
+Dokument zawiera fragmenty kodu z języka C++, w funkcji main zaimplementowano obliczanie silni z liczby podanej przez użytkownika. W listingu \ref{etykieta1} obliczana jest silnia z~ użyciem pętli while. 
+W listingu \ref{etykieta2} obliczana jest silnia z użyciem pętli for. 
+
+\begin{lstlisting}[caption=Obliczanie silni w while, captionpos=t, label=src:sqrt, frame=lbtr, frameround=ffff, captionpos=b, label=etykieta1]
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int s, n, i;
+  cout << "Proszę podać liczbę naturaną n : ";
+  cin >> n;
+  i = 1;
+  s = 1;
+  
+  while (i < n)
+  {
+    i++;
+    s *= i;
+  }
+  cout << "Silnia: " << s << endl;
+}
+\end{lstlisting}
+
+\begin{lstlisting}[caption=Obliczanie silni w for, captionpos=t, label=src:sqrt, frame=lbtr, frameround=ffff, captionpos=b, label=etykieta2]
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int s, n, i;  
+  cout << "Podaj liczbę naturalną, n = ";
+  cin >> n;
+  s = 1;  
+  
+  for(i = 2; i <= n; i++) s *= i;  
+  
+  cout << "Silnia n: " << s << endl;
+}
+\end{lstlisting}
+
+\end{document}

@@ -1,0 +1,40 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[polish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{anysize}
+\usepackage{enumerate}
+\usepackage{times}
+
+\sloppy
+ 
+\begin{document}
+\section*{The Model-Checking Process}
+
+
+In applying model checking to a design the 
+following diﬀerent phases can be distinguished: 
+\begin{itemize}
+\item \textit{Modeling phase:} 
+	\begin{itemize}
+	\item[--]model the system under consideration using the model description language of the model checker at hand; 
+	\item[--]as a ﬁrst sanity check and quick assessment of the model perform some simulations; 
+	\item[--]formalize the property to be checked using the property speciﬁcation language. 
+	\end{itemize}
+\item \textit{Running phase:} 
+run the model checker to check the validity of the property in the system model. 
+
+\item \textit{Analysis phase:}
+	\begin{itemize}
+		\item[--]{property satisﬁed? check next property (if any);}
+		\item[--]{property violated? 
+			\begin{enumerate}
+				\item generated counterexample by simulation; 
+				\item reﬁne the model, design, or property;
+				\item repeat the entire procedure.
+			\end{enumerate}}
+		\item[--]{out of memory? try to reduce the model and try again.}
+	\end{itemize}
+\end{itemize}
+\end{document}

@@ -1,0 +1,32 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[polish]{babel}
+\usepackage[latin2]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{anysize}
+\usepackage{times}
+\usepackage{multirow}
+ 
+%\marginsize{left}{right}{top}{bottom}
+\marginsize{0.5cm}{3cm}{3cm}{3cm}
+\sloppy
+ 
+\begin{document}
+\begin{table}[htbp]
+\label{Tab:Zadanie}
+\begin{center}
+\begin{tabular}{c|c|c|c|c}
+\hline \multirow{3}{0.5cm}{a} & \multirow{3}{0.5cm}{\centering b} & \multicolumn{2}{|c|}{\centering abc} & \multirow{3}{0.5cm}{\centering e} \\ \cline{3-4}
+& & c & d & \\\hline
+\multirow{4}{0.5cm}{\centering pqr} & 1 & 2& 3 & 4\\
+& 1 & 2& 3 & 4\\
+& 1 & 2& 3 & 4\\
+& 1 & 2& 3 & 4\\ \hline
+\multirow{4}{0.5cm}{\centering xyz} & 1 & 2& 3 & 4\\
+& 1 & 2& 3 & 4\\
+& 1 & 2& 3 & 4\\
+& 1 & 2& 3 & 4\\ \hline
+
+ \end{tabular}
+ \end{center}
+ \end{table}
+\end{document}

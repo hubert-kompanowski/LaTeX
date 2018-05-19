@@ -1,0 +1,39 @@
+\documentclass[a4paper,11p]{article}
+\usepackage{txfonts} %for :=
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage{times}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+\begin{document}
+
+\begin{algorithm}
+\caption{Jakis algorytm}
+
+\State $\triangleright$ \verb!ASSIGN! 
+\State $\triangleright$ \verb!init(s)! = \verb!s0;! 
+\State $\triangleright$ \verb!next(s)! \coloneqq \verb!case!
+
+	\ForAll{$si \in s$}
+		\ForAll{$tk \in T$}
+		\State $\mathbi{V}_{ik} \gets \emptyset$
+			\ForAll{$sj \in s$}
+                        \If{$(M_i, S_i) \overset{tk}{\longrightarrow} (M_j, S_j)$}
+                        \State $\mathbi{V}_{ik} \gets \mathbi{V}_{ik} \cup \{sj\}$
+                \EndIf
+        \EndFor
+                \State $\triangleright$ \verb!s! $=$ \verb!si! \verb! & action! $=$ \verb!tk!$\colon  \{\mathbi{V}_{ik}$ \verb!contents!\};
+        \EndFor
+\EndFor
+\State $\triangleright$ \verb!esac;!
+
+
+\end{algorithm}
+\end{document}
+

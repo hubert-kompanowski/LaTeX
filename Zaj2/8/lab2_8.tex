@@ -1,0 +1,33 @@
+\documentclass[a4paper,12pt]{article}      
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc}
+\usepackage{times}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[polish]{babel}
+\newtheorem*{theorem}{Twierdzenie}
+\usepackage{enumerate}
+\usepackage{enumitem}
+
+\sloppy
+
+\begin{document}
+
+\begin{theorem}
+Jeżeli $\lim \limits_{n \to \infty}  a_{n} = a$ i $ \lim \limits_{n \to \infty}  b_{n} = +\infty$, to:
+\begin{enumerate}
+\item[$1^\circ$] $\lim \limits_{n \to \infty} (a_{n} + b_{n}) = +\infty$
+\item[$2^\circ$] $\lim \limits_{n \to \infty} (a_{n} \cdot b_{n}) = 
+\left\{ \begin{array}{111} 
++\infty,& \textnormal{gdy}& a>0,\
+-\infty,& \textnormal{gdy}& a<0, 
+\end{array} \right.$
+\item[$3^\circ$] $\lim \limits_{n \to \infty} \frac{a_{n}}{b_{n}} = 0, $ przy $b_{n}\neq 0$ dla $n \in \mathbb{N} $
+\item[$4^\circ$] $\lim \limits_{n \to \infty} \frac{b_{n}}{a_{n}} = 
+\left\{ \begin{array}{111} 
++\infty,& \textnormal{gdy}& a>0,\\
+-\infty,& \textnormal{gdy}& a<0, 
+\end{array} \right.$ przy założeniu że $a_{n} \neq 0 $ dla $n \in \mathbb{N}$.
+\end{enumerate}
+\end{theorem}
+\end{document}
