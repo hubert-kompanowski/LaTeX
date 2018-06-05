@@ -1,0 +1,3 @@
+http://www.codecogs.com/latex/eqneditor.php  -  równania
+http://www.tablesgenerator.com/#             -  tabele
+http://detexify.kirelabs.org/classify.html   -  symbole

@@ -1,0 +1,95 @@
+% Michał Wójcik 
+
+\documentclass[a4paper,11pt]{article}
+%Przydatne paczki:
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsmath}
+
+%Definicja kodowania i języka:
+\usepackage[polish]{babel}
+\usepackage[MeX]{polski}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%Paczki dodane w drodze pisania:
+\usepackage{graphicx}
+\usepackage{anysize}
+\selectlanguage{polish}
+\usepackage{tabularx}
+\usepackage[export]{adjustbox}
+\usepackage{listings}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{listing}
+\usepackage{times}
+\usepackage{tikz}
+\usetikzlibrary{calc,through,backgrounds,positioning,fit}
+\usetikzlibrary{shapes,arrows,shadows}
+%\usepackage{algorithm}
+%\usepackage{algpseudocode}
+\usepackage{multirow}
+\usepackage{courier}
+\usepackage{enumitem}
+%\marginsize{left}{right}{top}{bottom}
+\marginsize{4cm}{2cm}{2cm}{2cm}
+
+
+%Nagłówek:
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot[L, C, R] {}
+\fancyfoot[R]{Strona \thepage}
+\fancyhead[L]{LITERATURA}
+\renewcommand{\headrulewidth}{0.8pt}
+\renewcommand{\footrulewidth}{0.8pt}
+
+\begin{document}
+\setcounter{section}{35}
+\setcounter{footnote}{7}
+\setcounter{table}{14}
+\setcounter{page}{151}
+	\section{Tabela i literatura}
+	\label{rozdzial}
+	\subsection{Instrukcja}
+	Należy napisać document klasy \textit{article} w postaci takiej jak Pani/Pan trzyma w ręku. Dopuszczalne są odstępstwa od tej postaci, tj. rozszerzenia oraz zawężenia do uproszczonej postaci (za dodatkowe ,,dodatnie'' i ,,ujemne'' punkty). Informacje o tych modyfikacjach znajdują się w przypisach\footnote{Zalecane parametry dokumentu to \textit{a4paper,11pt}, marginesy: górny i dolny 2 cm, lewy 4 cm, a prawy 2 cm.}.
+	
+	Ta strona zawiera rozdział (sekcję) \ref{rozdzial}, a w nim dwa podrozdziały (podsekcje)\footnote{Najepiej byłoby nadać numer rozdziału ustawiając odpowiedni licznik. W przypadku innych obiektów -- podobnie, ale należy traktować to jako kosmetykę. Ważniejsze jest, aby w odwołaniach do obiektów używać przypisanych im etykiet.} i spis literatury.
+	
+	\textcolor{red}{
+	Na początku pliku źródłowego w komentarzu proszę wpisać swoje imię i nazwisko. Wersję źródłową (.tex i .bib) i wynikową (.pdf) proszę wysłać na adres \texttt{ptm@agh.edu.pl}\footnote{Te dwa zdania należy napisać kolorem czerwonym}.}
+	
+	\subsection{Zadania}
+	\begin{enumerate}
+		\item W tabeli \ref{tabela} przedstawiono klasyfikację stałych w języku C.
+		\begin{table}[h]
+			\caption{Stałe w języku C}
+			\label{tabela}
+			\centering{
+		\begin{tabular}{l l l l  |l| }
+			\cline{5-5}
+			& & & & {Przykład} \\ \cline{1-5}
+			\multicolumn{4}{|l|}{Deklarowane stałe}& \texttt{const int size =128}  \\ \cline{1-5}
+			\multicolumn{4}{|l|}{Stałe preprocesora}& \texttt{\#define SIZE 256} \\ \cline{1-5}
+			\multicolumn{1}{ |l }{\multirow{7}{*}{Literały}} & \multicolumn{3}{|l|}{łańcuch znakowy} & \texttt{"koniec linii.\textbackslash n"}      \\ \cline{2-5}
+			\multicolumn{1}{ |l }{}&\multicolumn{2}{|l|}{\multirow{2}{*}{znakowe}} & \textit{escape sequence} & \texttt{'\textbackslash n','\textbackslash xa4'}\\ \cline{4-5}
+			\multicolumn{1}{ |l }{}& \multicolumn{2}{ |l|}{}& znak & \texttt{'A', '!'}\\ \cline{2-5}
+			\multicolumn{1}{ |l }{}&\multicolumn{1}{|l|}{\multirow{4}{*}{liczbowe}} & \multicolumn{1}{l|}{\multirow{3}{*}{całkowite}}& dziesiętne & \texttt{8743}\\ \cline{4-5}
+			\multicolumn{1}{|l}{} & \multicolumn{1}{|l|}{} &  \multicolumn{1}{l|}{} & ósemkowe & \texttt{07464} \\ \cline{4-5}
+			\multicolumn{1}{|l}{} & \multicolumn{1}{|l|}{} &  \multicolumn{1}{l|}{} & szesnastkowe & \texttt{0x5AFF} \\ \cline{3-5}
+			\multicolumn{1}{|l}{} & \multicolumn{1}{|l|}{} &  \multicolumn{2}{l|}{zmiennoprzecinkowe} & \texttt{140.58} \\ \cline{1-5}
+		\end{tabular}}
+		\end{table}
+		\item Należy\footnote{Możliwe uproszczenie: znaki przy wypunktowaniu w każdej pozycji można zastąpić standardowym znakiem dla ,,itemize''}:
+		\begin{itemize}
+			\item[$\diamondsuit$] znaleźć w sieci notki bibliograficzne dwóch pozycji\footnote{Z dokładnością do autorów i tytułu -- pozostałe dane mogą wskazywać na inne wydanie.}
+			\item[$\diamondsuit$] utworzyć plik .bib
+			\item[$\star$] odwołać się do znalezionych pozycji cytując zdanie:
+			\subitem Dalsze informacje można znaleźć w literaturze \cite{kahneman2011thinking} lub \cite{Kernighan88}.
+		\end{itemize}
+
+	\end{enumerate}
+
+	\bibliographystyle{plunsrt}
+\bibliography{biblio_2017_ptm}          %nazwa pliku .bib
+
+\end{document}
