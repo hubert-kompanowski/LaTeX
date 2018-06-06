@@ -1,0 +1,105 @@
+\documentclass[a4paper,11pt,fleqn]{article}
+\usepackage[utf8]{inputenc}   % lub utf8
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{anysize}
+\usepackage{enumerate}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{times}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{sidecap}
+\usepackage{wrapfig}
+\usepackage[polish, british]{babel}
+\usepackage{caption}
+\usepackage[export]{adjustbox}
+%\marginsize{left}{right}{top}{bottom}
+\marginsize{3.5cm}{2.5cm}{3cm}{2cm}
+%\newtheorem{theorem}{Theorem }
+\begin{document}
+\selectlanguage{polish}
+\setcounter{section}{5}
+\setcounter{page}{123}
+ 
+ 
+\section{Instrukcja}
+Jest to ,,sztuczny dokument`` klasy \textit{artykuł} złozony z szóstej sekcji (Instrukcji), siódmej sekcji
+(w języku angielskim) oraz spisu literatury. Papier A4, podstawowy rozmiar czcionki 11pt, margines
+górny ma 3cm, dolny 2 cm, lewy 3,5 cm, prawy 2,5 cm.
+ 
+ 
+ 
+\subsection{Co należy zrobić}\label{conalezyzrobic}
+\begin{enumerate}
+\item Nalezy utworzyć w {\LaTeX}u dokument jak najblizszy temu, który Pani/Pan teraz czyta\footnote{W kolejnych podsekcjach są wskazania na szczegóły, na które warto zwrócic uwagę.}.
+\item Na początku pliku źródłowego (w komentarzu) proszę umieścić swoje Imię i Nazwisko.
+\item Plik źródłowy (\textit{.tex}) i ew. inne pliki wymagane przy kompilacji oraz plik wynikowy (\textit{.pdf})
+należy wysłać na adres \href{mailto:miller@agh.edu.pl}{\nolinkurl{miller@agh.edu.pl} } jako załączniki wiadomości o tytule zawierającym Nazwisko i Imię. Jeżeli kompresja byłaby konieczna, to proszę zastosować
+format \textit{zip}.
+\end{enumerate}
+ 
+ 
+ 
+\subsection{Na co zwrócić uwagę}
+Proszę zwrócic uwagę na \colorbox{red}{\textbf{rozmiar papieru, czcionki i marginesów}} oraz na wymienione nizej szczegóły\footnote{Odstępstwa od wzorca w tych miejscach nie dyskwalifikują pracy, ale mogą spowodować delikatne obniżenie oceny}.
+\begin{itemize}
+\item Na końcach linii nie ma wyrazów jednoliterowych.
+\item Wyrażenia (\ref{equation1a}–\ref{equation1c}) są wyrównane w pionie wg znaku nierówności.
+\item Numeracja tych nierównosci jest złożona z liczby i litery – w wersji uproszczonej może
+zawierać kolejne liczby.
+\item Odwołania do wzorów, sekcji, literatury itp. powinny być „elastyczne” — należy nadawać
+odpowiednie etykiety i skorzystać z nich przy odwołaniu.
+\item Numeracja sekcji, twierdzeń i stron nie zaczyna się od 1.
+\item Pisząc twierdzenie należy użyć odpowiedniego stylu.
+\item Dowód jest zakonczony specjalnym znakiem.
+\item Odwołanie do literatury można ograniczyć do numeru pozycji — bez numeru rozdziału, paragrafu i twierdzenia.
+\item[*] Tworząc spis literatury można (bez obniżenia oceny) zamiast Bib{\TeX}a użyć środowiska
+\textcolor{blue}{thebibliography}.
+\item[*] Mój adres mailowy w (\ref{conalezyzrobic}) jest napisany z uzyciem pakietu \textit{hyperref}, ale mozna tę postać osiągnąć ,,ręcznie`` — bez obniżenia oceny
+\item W tym wypunktowaniu używany jest inny symbol (gwiazdka) w przypadkach, gdy odejście od wzorca nie obniza oceny.
+\end{itemize}
+ 
+\newpage\selectlanguage{british}
+\section{Differential Inequalities}
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\setcounter{theorem}{7}
+\begin {theorem}
+\small {Suppose that the functions $m(x)$ and $u(x)$are continuous and satisfy for $x_0 \leq x < X$}
+\end{theorem}
+ 
+\begin{subequations}
+\begin{align}
+&&D + m(x) \leq& \:,g (x, m(x))\label{equation1a}\\
+&&D + u(x) >& \:g(x, u(x))\label{equation1b}\\
+&&m(x0) \leq& \:u(x0)\label{equation1c}.
+\end{align}
+\end{subequations}
+ 
+Then
+ 
+\begin{align}\label{equation2}
+&&m(x) \leq u(x)\quad &\text{for}\quad x_0 \leq x \leq X.
+\end{align}
+ 
+The same conclusion is true if both $D_+$ are replaced by $D^+$.
+\begin{proof}
+If (\ref{equation2}) were not true, we could choose a point $x_2$ with $m(x_2) > u(x_2)$ and look for the first
+point $x_1$ to the left of $x_2$ with $m(x_1) = u(x_1)$ . Then for small $h > 0$ we would have
+$$\frac{m(x_1 + h) - m(x_1)}{h} > \frac{u(x_1 + h) - u(x_1)}{h}$$
+and, by taking limits, $D_+m(x_1) \leq D_+u(x_1)$. This, however, contradicts (\ref{equation1a}) and (\ref{equation1b}), which give
+$$D_+m(x_1) \leq g(x_1, m(x_1)) = g(x_1, u(x_1)) < D_+u(x_1).$$
+\end{proof}
+Many variant forms of this theorem are possible, for example by using left Dini derivates~\cite[Chap. II, §8, Theorem V]{Walter}.
+ 
+\begin{thebibliography}{1}
+\bibitem{Walter}
+W. Walter (1970): Differential and integral inequalities. Springer Verlag 352pp., german edition 1964.
+\end{thebibliography}
+ 
+\end{document}
