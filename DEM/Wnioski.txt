@@ -1,0 +1,41 @@
+WIOSKI DO SPRAWOZDANIIA 4
+
+Hubert Komapnowski 
+
+
+Zadanie 1
+
+Amplituda - Zmiana amplitudy w elemencie 'Sine Wave Function' powoduje zmianę amplitudy pulsacji wyjściowego sygnału. Zwiększając ampltudę otrzymujemy stosunkowo niewielki wzrost amplitudy sygnału wyjściowego.
+
+Częstotliwość - Ustawiając stosunkowo małą częstotliwość sygnału sinusoidalnego na wejściu otrzymujemy wykres pokazujący sygnał zbliżony do sinusoidy - niewidoczne wachania amplitudy. Natomiast przy częstotliwościach rzędu 50 rad/s ukazuje nam się okresowa zmiana amplitudy wachań podobnych do sinusoidy. Zwiększając częstotliwość do wartości rzędu 200 rad/s ukazuje nam się kolejny rodzaj tendencji zmian amplitudy.
+
+Faza - zmieniając parametr fazy zmieniamy początkową warość sygnału wejściowego. Wpływa ona na charakter całego dalszego wyniku ukazanego na wykresie sygnału wyjściowego. 
+
+Sygnał jest na początku bardzo nieregularny. Stopniowo w miare trwania kolejnych okresów sygnał zmienia się i kształtuje na zbliżony do sygnału okresowo zmiennego.
+
+
+Zadanie 2
+
+Wykresy stworzone przy użyciu funkcji nyquist zadane wzorami G(s) = 1 / (s^2 + s + 2) oraz G(s) = 1 / (s^2 - 0.1s + 1) nie zawierają punktu (-1,0) na płaczyźnie liczb zespolonych więc po zamknięciu będą stabline.
+
+
+Zadanie 3
+
+Charakterystyki pokazują nam jakie rodzaje częstotliwości są tłumione przy użyciu konkretnych filtrów. Każdy filtr charakteryzuje się zakresem częstotliwości tłumienia odpowienio:
+_________________________________________________________
+|      Rodzaj filtra        |   Zakres częstotliwości:  |
+|---------------------------|---------------------------|
+|Filtr dolnoprzepustowy     |   wysokie częstotliwości  |
+|---------------------------|---------------------------|
+|Filtr górnoprzepustowy     |   niskie częstotliwości   |
+|---------------------------|---------------------------|
+|Filtr pasmoprzepustowy     |    niskie i wysokie cz.   |
+|---------------------------|---------------------------|
+|Filtr drugiego rzędu       |    tłumi wysokie oraz     |
+|                           |     wzmacnia średnie      |
+|___________________________|___________________________|
+
+
+Zadanie 4
+
+
